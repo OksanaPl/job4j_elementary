@@ -5,7 +5,6 @@ public class SqArea {
         double rsl1 = k + 1;
         double rsl2 = 2 * rsl1;
         double h = p / rsl2;
-
         double l = h * k;
 
         return l * h;
