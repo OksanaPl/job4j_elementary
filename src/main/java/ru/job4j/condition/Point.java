@@ -9,9 +9,9 @@ public class Point {
         double rsl4 = Math.pow(rsl2, 2);
 
         double rsl5 = rsl3 + rsl4;
-        double rsl6 = Math.sqrt(rsl5);
-        return rsl6;
-    }
+
+        return Math.sqrt(rsl5);
+        }
 
     public static void main(String[] args) {
         double result = Point.distance(2, 3, 2, 9);
