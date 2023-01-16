@@ -3,20 +3,17 @@ package ru.job4j.arrray;
 public class JavaNameValidator {
 
     public static boolean isNameValid(String name) {
-        if (name.isEmpty()) {
-            return false;
-        }
         char[] chars = name.toCharArray();
-        if (isUpperLatinLetter(chars[0]) || isDigit(chars[0])) {
+        if (name.isEmpty() || isUpperLatinLetter(chars[0]) || isDigit(chars[0])) {
             return false;
         }
         for (int i = 1; i < chars.length; i++) {
-            if (isDigit(chars[i]) || isSpecialSymbol(chars[i])
-                || isLowerLatinLetter(chars[i]) || isUpperLatinLetter(chars[i])) {
-                return true;
+            if (!(isDigit(chars[i]) || isSpecialSymbol(chars[i])
+                || isLowerLatinLetter(chars[i]) || isUpperLatinLetter(chars[i]))) {
+                return false;
             }
         }
-        return false;
+        return true;
     }
 
     public static boolean isSpecialSymbol(int code) {
