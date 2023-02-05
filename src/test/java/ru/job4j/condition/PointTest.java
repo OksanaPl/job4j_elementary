@@ -34,4 +34,34 @@ public class PointTest {
         double esp = 0.01;
         Assert.assertEquals(expected, out, esp);
     }
+
+    @Test
+    public void when239to298then6dot08() {
+        Point a = new Point(2, 3, 9);
+        Point b = new Point(2, 9, 8);
+        double expected = 6.08;
+        double out = a.distance3d(b);
+        double esp = 0.01;
+        Assert.assertEquals(expected, out, esp);
+    }
+
+    @Test
+    public void when684to358then5dot83() {
+        Point a = new Point(6, 8, 4);
+        Point b = new Point(3, 5, 8);
+        double expected = 5.83;
+        double out = a.distance3d(b);
+        double esp = 0.01;
+        Assert.assertEquals(expected, out, esp);
+    }
+
+    @Test
+    public void when639to289then6dot40() {
+        Point a = new Point(6, 3, 9);
+        Point b = new Point(2, 8, 9);
+        double expected = 6.40;
+        double out = a.distance3d(b);
+        double esp = 0.01;
+        Assert.assertEquals(expected, out, esp);
+    }
 }
